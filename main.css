@@ -60,29 +60,29 @@
 
 @keyframes asteroid {
     0% {
-        left: 0;
+        left: 10vw;
     }
 
     50% {
-        left: 83vw;
+        left: 90vw;
     }
 
     100% {
-        left: 0;
+        left: 10vw;
     }
 }
 
 @-webkit-keyframes asteroid {
     0% {
-        left: 0;
+        left: 10vw;
     }
 
     50% {
-        left: 83vw;
+        left: 90vw;
     }
 
     100% {
-        left: 0;
+        left: 10vw;
     }
 }
 
@@ -102,7 +102,7 @@ body,
     overflow-x: hidden;
     position: relative;
     font-size: 6.5vw;
-}
+/* margin-bottom: 10vh; */}
 
 #main {
     background-image: url(assets/media/just_background.svg);
@@ -154,16 +154,28 @@ body,
 .instructions {
     height: 10vw;
     width: 80vw;
-    top: 12vh;
-    font-size: 11vw;
+    top: 11vh;
+    font-size: 9.5vw;
     text-align: center;
 }
 
 .button {
     position: absolute;
-    bottom: 5vh;
+    bottom: 25vh;
     z-index: 5;
 }
+
+/* canvas {
+    background: #000;
+    position: absolute;
+    height: 180px;
+    width: 303px;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+} */
 
 /* loader */
 .loader {
@@ -335,30 +347,40 @@ input {
 /* mission */
 
 #asteroid {
-    width: 17vw;
-    height: 15.5vw;
-    background-image: url(assets/media/tasa_logo.svg);
+    width: 25vw;
+    height: 24.5vw;
+    background-image: url(assets/media/asteroid.svg);
     /* left: 0; */
     position: absolute;
-    bottom: 70vh;
-    animation: asteroid 2s infinite;
+    bottom: 60vh;
+    animation: asteroid 4s linear infinite;
 }
 
-.lazer {
-    background-image: url(assets/media/odot.png);
+#lazer {
+    background-image: url(assets/media/laserDot.svg);
     width: 9vw;
     height: 9vw;
-    bottom: 0px;
+    bottom: 112px;
     position: absolute;
-    left: 50%;
-    /* transform: translate(-50%, 0%); */
+    left: 48.5vw;
 }
 
+.launcher {
+    background-image: url(assets/media/laser.svg);
+    width: 30vw;
+    height: 90vw;
+    bottom: -10vw;
+    position: absolute;
+    left: 38vw;
+z-index: 1;}
+
 #mission .button {
-    width: 10vw;
-    height: 5vh;
+    width: 22vw;
+    height: 9vh;
     left: 2vw;
-    background-color: aqua;
+    background-image: url(assets/media/launch.svg);
+    background-color: transparent;
+    border-color: transparent;
 }
 
 #mission .container {
@@ -366,6 +388,14 @@ input {
     width: 100vw;
     position: absolute;
     z-index: 1;
+}
+
+.explosion {
+    width: 18vw;
+    position: absolute;
+    height: 16vh;
+    /* top: -7vh; */
+    display: block;
 }
 
 /* animations */
