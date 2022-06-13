@@ -1,0 +1,379 @@
+@font-face {
+    font-family: Karantina;
+    src: url(assets/fonts/karantina/Karantina-Regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Assistant;
+    src: url(assets/fonts/Assistant-Light.ttf);
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes asteroid {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 83vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes asteroid {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 83vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+html,
+body,
+#main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    direction: rtl;
+    font-family: "Karantina";
+    color: aliceblue;
+    user-select: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    font-size: 6.5vw;
+}
+
+#main {
+    background-image: url(assets/media/just_background.svg);
+}
+
+.page {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+
+.background {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.bold {
+    /* font-family: "Karantina-Bold"; */
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.horizon-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.flex {
+    display: flex;
+}
+
+#rocket {
+    z-index: 0;
+    bottom: 0;
+    height: 40vh;
+    opacity: 0.5;
+}
+
+.instructions {
+    height: 10vw;
+    width: 80vw;
+    top: 12vh;
+    font-size: 11vw;
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 5vh;
+    z-index: 5;
+}
+
+/* loader */
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f45d;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.loader>img {
+    width: 50vw;
+}
+
+.loader.fade {
+    animation: fadeOut 1s 2s forwards;
+}
+
+.logo {
+    position: fixed;
+    width: 18vw;
+    top: 1vh;
+    /* height: 7vh; */
+    left: 1vw;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+/* about */
+
+.body-odot {
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.odot-logo {
+    position: fixed;
+    width: 10vw;
+    top: 1vh;
+    /* height: 3.5vh; */
+    right: 1vw;
+    display: block;
+}
+
+.div-odot {
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: 90vh;
+}
+
+.p-odot {
+    margin: 0.5em;
+}
+
+.div-p-odot {
+    font-family: Assistant;
+    font-size: 0.8em;
+}
+
+.till-logo {
+    width: 23vW;
+    height: auto;
+}
+
+.back-button {
+    right: 2vh;
+    width: 18vw;
+}
+
+.div-middle {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 0em;
+    margin-top: 2em;
+    justify-content: space-around;
+}
+
+/* opening */
+
+#opening {
+    display: block;
+}
+
+.cooardinates {
+    width: 44vw;
+    height: 20vh;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+input {
+    width: 44vw;
+    height: 5vh;
+    border-radius: 20px;
+    border-width: 6px;
+    border-color: gray;
+    border-style: solid;
+    text-align: center;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+/* instructions */
+
+.start-button {
+    left: 2vw;
+    width: 29vw;
+}
+
+/* questions */
+
+.multipleQuestionContainer {
+    width: 90vw;
+    height: auto;
+    padding-bottom: 19vw;
+    background-image: url(assets/media/bigger_textbox.svg);
+}
+
+.multipleQuestionContainer>.multipleQuestion {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 8vw;
+    top: 0;
+}
+
+.ansContainer {
+    margin: auto;
+    position: relative;
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.multipleAns,
+.binaryAns {
+    background-image: url(assets/media/generic_button.svg);
+    text-align: center;
+    width: 60%;
+    margin-bottom: 1vh;
+}
+
+/* mission */
+
+#asteroid {
+    width: 17vw;
+    height: 15.5vw;
+    background-image: url(assets/media/tasa_logo.svg);
+    /* left: 0; */
+    position: absolute;
+    bottom: 70vh;
+    animation: asteroid 2s infinite;
+}
+
+.lazer {
+    background-image: url(assets/media/odot.png);
+    width: 9vw;
+    height: 9vw;
+    bottom: 0px;
+    position: absolute;
+    left: 50%;
+    /* transform: translate(-50%, 0%); */
+}
+
+#mission .button {
+    width: 10vw;
+    height: 5vh;
+    left: 2vw;
+    background-color: aqua;
+}
+
+#mission .container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+
+/* animations */
+
+.fade-in {
+    animation: fadeIn ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut ease forwards;
+}

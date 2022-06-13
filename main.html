@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/media/tasa_logo.svg">
+
+  <!-- specific code -->
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+
+  <!-- elements and question creation -->
+  <script src="generic.js"></script>
+  <script src="questions.js"></script>
+
+  <!-- dragging -->
+  <script src="drag.js"></script>
+  <!-- phone drag -->
+  <script src="dragDropTouch.js"></script>
+
+  <title>אסטרואיד</title>
+</head>
+
+<body>
+  <div id="main" class="background">
+    <!-- loader -->
+    <div class="loader">
+      <img src="assets/media/center and mask.gif" alt="Loading..." />
+    </div>
+
+    <!-- logos -->
+    <div class="header">
+      <img src="assets/media/tasa_logo.svg" alt="logo" class="logo">
+      <img class="odot-logo" src="assets/media/odot.png" alt="odot">
+    </div>
+
+    <!-- about -->
+    <div id="about" class="page div-odot">
+      <div class="div-middle">
+        <div class="div-p-odot">
+          <p class="p-odot">יוזמת פרוייקט: סמ"ר גל גנסין</p>
+          <p class="p-odot">מנהלת פרוייקט: סמ"ל דורין חתוקה</p>
+          <p class="p-odot">פיתוח: סמל טל סרוסי</p>
+          <p class="p-odot">גרפיקאית: רב"ט לוטם גרוס</p>
+          <p class="p-odot">רמ"ד טי"ל: רס"ן מיגל לויתן</p>
+        </div>
+        <img src="assets/media/till_whitelogo.svg" alt="till_whitelogo" class="till-logo">
+      </div>
+      <img src="assets/media/back_button.svg" alt="back button" class="back-button button" id="back-button-odot">
+    </div>
+
+    <!-- opening -->
+    <div id="opening" class="page background">
+      <div class="container">
+        <div class="instructions bold horizon-center">הכניסו את המיקום אליו צריך לכוון את הטיל</div>
+        <div class="cooardinates center flex">
+          <input data-num="1" type="number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="3" placeholder="הכניסו קוארדינטה">
+          <input data-num="2" type="number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="3" placeholder="הכניסו קוארדינטה">
+        </div>
+      </div>
+    </div>
+
+    <!-- instructions -->
+    <div id="instructions" class="page background">
+      <div class="container">
+        <div class="instructions bold horizon-center">המספרים שהכנסתם התבררו כנכונים!<br>ענו על כמה שיותר שאלות כדי
+          להשיג תחמושת!</div>
+        <img src="assets/media/start_button.svg" alt="start button" class="start-button button">
+      </div>
+    </div>
+
+    <!-- questions -->
+    <div id="questions" class="page background">
+      <div class="container">
+        <div class="multipleQuestionContainer center"></div>
+      </div>
+    </div>
+
+    <!-- mission -->
+    <div id="mission" class="page background">
+      <button type="button" class="button">שגר!</button>
+      <div class="container background">
+        <div class="instructions bold horizon-center">כוונו את הירייה באמצעות לחיצה ארוכה ולחצו על הכפתור כדי לירות!</div>
+        <div id="asteroid" class="background horizon-center"></div>
+        <div class="lazer background horizon-center"></div>
+      </div>
+    </div>
+
+    <!-- background -->
+    <img id="rocket" class="horizon-center" src="assets/media/spaceship.svg" alt="טיל">
+
+
+  </div>
+</body>
