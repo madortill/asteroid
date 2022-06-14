@@ -129,7 +129,7 @@ body,
 
 .center {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -155,13 +155,17 @@ body,
     height: 10vw;
     width: 80vw;
     top: 11vh;
-    font-size: 9.5vw;
+    font-size: 13.5vw;
     text-align: center;
+}
+
+#mission .instructions {
+    font-size: 9.5vw;
 }
 
 .button {
     position: absolute;
-    bottom: 25vh;
+    bottom: 10vh;
     z-index: 5;
 }
 
@@ -360,7 +364,7 @@ input {
     background-image: url(assets/media/laserDot.svg);
     width: 9vw;
     height: 9vw;
-    bottom: 112px;
+    bottom: 60px;
     position: absolute;
     left: 48.5vw;
 }
@@ -369,7 +373,7 @@ input {
     background-image: url(assets/media/laser.svg);
     width: 30vw;
     height: 90vw;
-    bottom: -10vw;
+    bottom: -24vw;
     position: absolute;
     left: 38vw;
 z-index: 1;}
@@ -381,7 +385,7 @@ z-index: 1;}
     background-image: url(assets/media/launch.svg);
     background-color: transparent;
     border-color: transparent;
-}
+/* bottom: 10vh; */}
 
 #mission .container {
     height: 100vh;
