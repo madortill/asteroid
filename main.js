@@ -34,8 +34,8 @@ var matrix = [
 ];
 
 // code to open the mission
-const coordinate_1 = "000";
-const coordinate_2 = "111";
+const coordinate_1 = "183";
+const coordinate_2 = "542";
 
 var dragX = 0,
     dragY = 0;
@@ -143,7 +143,7 @@ activeShot = () => {
     } else {
         shotH = Math.abs(((h - dragY) / (dragX - 0.5 * w))) * Math.abs(shotW);
     }
-    document.querySelector("#lazer").style.bottom = `0px`;
+    document.querySelector("#lazer").style.bottom = `60px`;
     shotFunc = setInterval(shotAnimation, 10 * (1 / Math.abs(angle)));
 
     document.querySelector("#mission .container").removeEventListener("mousemove", rotateShot);
