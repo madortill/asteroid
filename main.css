@@ -159,9 +159,6 @@ body,
     text-align: center;
 }
 
-#mission .instructions {
-    font-size: 9.5vw;
-}
 
 .button {
     position: absolute;
@@ -362,21 +359,22 @@ input {
 
 #lazer {
     background-image: url(assets/media/laserDot.svg);
-    width: 9vw;
-    height: 9vw;
+    width: 4vw;
+    height: 6vw;
     bottom: 60px;
     position: absolute;
-    left: 48.5vw;
+    left: 50.5vw;
 }
 
 .launcher {
     background-image: url(assets/media/laser.svg);
-    width: 30vw;
-    height: 90vw;
-    bottom: -24vw;
+    width: 21vw;
+    height: 62vw;
+    bottom: -13vw;
     position: absolute;
-    left: 38vw;
-z-index: 1;}
+    left: 42.5vw;
+    z-index: 1;
+}
 
 #mission .button {
     width: 22vw;
@@ -401,6 +399,21 @@ z-index: 1;}
     /* top: -7vh; */
     display: block;
 }
+
+
+#mission .instructions {
+    font-size: 9.5vw;
+}
+
+
+#counter {
+    position: absolute;
+    bottom: 10vh; 
+    z-index: 5;
+    right: 2vw;
+    font-size: 6.5vw;
+}
+
 
 /* animations */
 
