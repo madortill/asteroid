@@ -28,7 +28,7 @@ var matrix = [
         {
             // game- page 2
             divName: ["mission"], // the last div contains the speech bubble
-            functions: [`pop_eventListener(document.querySelector("#mission button"), 'click', activeShot)`, `pop_eventListener(document.querySelector("#mission .container"), 'mousemove', rotateShot)`] // array of functions that are needed to the page. If the functions contain the word "pop", it will happen only once and will be popped out of the array afterwards
+            functions: [`pop_eventListener(document.querySelector("#mission button"), 'click', activeShot)`, `pop_eventListener(document.querySelector("#mission .container"), 'mousemove', rotateShot)`, 'document.querySelector("#counter").innerHTML = `יריות: ${nMultipleCorrectAnswers}`;'] // array of functions that are needed to the page. If the functions contain the word "pop", it will happen only once and will be popped out of the array afterwards
         }
     ]
 ];
@@ -181,11 +181,12 @@ shotAnimation = () => {
             shotW = 0; 
             angle = 0;
             clearInterval(shotFunc);
-            document.querySelector("#lazer").style.cssText = `transform: rotate(0deg); left: 48.5vw; bottom: 0vh;`;
+            document.querySelector("#lazer").style.cssText = `transform: rotate(0deg); left: 50.5vw; bottom: 60px;`;
             document.querySelector(".launcher").style.cssText = `transform: rotate(0deg);`;
             document.querySelector("#mission button").disabled = false;
             pop_eventListener(document.querySelector("#mission .container"), 'mousemove', rotateShot);
             nMultipleCorrectAnswers--;
+            document.querySelector("#counter").innerHTML = `יריות: ${nMultipleCorrectAnswers}`;
             // end of shots
             if (nMultipleCorrectAnswers <= 0) {
                 // retry
