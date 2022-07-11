@@ -282,9 +282,13 @@ body,
     display: block;
 }
 
+#opening .instructions {
+    font-size: 9vh;
+}
+
 .cooardinates {
     width: 44vw;
-    top: 60vw;
+    top: 43vh;
     height: 30vw;
     flex-wrap: wrap;
     align-content: space-between;
