@@ -146,7 +146,7 @@ body,
 
 #rocket {
     z-index: 0;
-    bottom: 0;
+    top: 100vw;
     height: 60vw;
     opacity: 0.5;
 }
