@@ -129,7 +129,7 @@ body,
 
 .center {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -142,6 +142,8 @@ body,
 
 .flex {
     display: flex;
+    align-content: space-around;
+    /* align-items: center; */
 }
 
 #rocket {
@@ -348,6 +350,25 @@ input {
     text-align: center;
     width: 60%;
     margin-bottom: 1vh;
+}
+
+#shots-counter {
+    position: absolute;
+    flex-wrap: nowrap;
+    width: 90vw;
+    height: 10vw;
+    bottom: 0;
+    align-content: center;
+    justify-content: flex-start;
+    bottom: 10vh;
+}
+
+#shots-num {
+    font-size: 8vw;
+}
+
+.shot {
+    width: 6vw;
 }
 
 /* mission */
