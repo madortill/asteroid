@@ -37,7 +37,7 @@ Description: */
 const onClickAnswer = (event) => {
     // remove listeners
     let arrAns =  document.querySelectorAll(`.ans`);
-    for(let i = 0; i < arrAns.length; i++){
+    for(let i = 0; i < arrAns.length; i++){ 
         arrAns[i].removeEventListener("click" , onClickAnswer);
     }
     document.querySelector(`.${String(arrMultipleQuestions[nMultipleCurrentQuestion].correctAns)}`).style.backgroundImage = "url(assets/media/right_button.svg)";
@@ -45,6 +45,8 @@ const onClickAnswer = (event) => {
     if(event.currentTarget.classList[1] === String(arrMultipleQuestions[nMultipleCurrentQuestion].correctAns)){
         console.log("נכון");
         nMultipleCorrectAnswers++;
+        let lazer = El("img", {attributes: {class: `shot`, src: `assets/media/laserDot.svg`}});
+        document.querySelector(`#shots-counter`).append(lazer);
     } else {
         console.log("לא נכון");
         event.currentTarget.style.backgroundImage = "url(assets/media/wrong_button.svg)";
