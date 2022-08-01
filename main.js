@@ -208,6 +208,8 @@ retry = () => {
     movePage("1", "0");
     document.querySelector('#instructions .instructions').innerHTML = "לא הצלחתם לפוצץ את האסטרואיד ונגמרה לכם התחמושת... נסו שוב!";
     nMultipleCurrentQuestion = 0;
+    nMultipleCorrectAnswers = 0;
+    document.querySelector(`#shots-counter`).innerHTML = "מספר היריות:";
 }
 
 win = () => {
@@ -217,89 +219,9 @@ win = () => {
         document.querySelector(`#asteroid`).style.display = "none";
         setTimeout(function() {
             movePage("1", "0");
-            document.querySelector('#instructions .instructions').innerHTML = "איזה מזל! הצלחתם לפוצץ את האסטרואיד!";
+            document.querySelector('#instructions .instructions').innerHTML = "איזה מזל! בעזרת שליטתכם בחומר הצלחתם לפוצץ את האסטרואיד! הצלתם את העולם מפני השמדה!";
             document.querySelector(`.start-button`).style.display = "none";
         }, 1500);
     }, 700);
 }
 
-
-
-
-
-// let currLock;
-// loadMission = () => {
-//     document.querySelector('#opening').style.display = "none";
-//     document.querySelector('#mission').style.display = "block";
-//     // allow drag and drop
-//     setDrag();
-//     setDrop();
-
-//     let lock;
-//     let ArrLocks = [];
-//     for (let i = 1; i <= 9; i++) {
-//         // drag
-//         lock = El("div", {classes: [`drag`, `background`], attributes: {"data-num": i, "draggable" : "false"}}, 
-//         El("div", {classes: [`background`, `lock`], listeners: {click : question}}));
-//         ArrLocks.push(lock); 
-//         lock.style.backgroundImage = `url(assets/media/puzzle_${i}.svg)`;
-//         // drop
-//         drop = El("div", {classes: [`drop`, `flex`], attributes: {"data-num": i}});
-//         document.querySelector(`#puzzle`).append(drop);
-//     }
-//     let random;
-//     for (let i = 1; i <= 9; i++) {
-//         random = Math.floor(Math.random() * ArrLocks.length);
-//         document.querySelector(`#pieces`).append(ArrLocks[random]);
-//         ArrLocks.splice(random, 1);
-//     }
-//     // document.querySelectorAll('.lock').forEach((lock) => {
-//     //     lock.addEventListener('click', question);
-
-//     // });
-// }
-
-// // popping question
-// question = (event) => {
-//     //event.target.style.display = "none";
-//     // event.target.parentElement.setAttribute("draggable", "true");
-//     // document.querySelector('.completeSentenceContainer').style.display = "block";
-//     // addAnimation(document.querySelector('.completeSentenceContainer'), "fade-in", 1500, 500);
-//     // addAnimation(document.querySelector('.completeSentenceContainer'), "fade-in", 1500, 200);
-//     // if (document.querySelector('.completeSentenceContainer').classList.contains("fade-out")) {
-//     //     document.querySelector('.completeSentenceContainer').classList.remove("fade-out")
-//     // };
-//     document.querySelector('.completeSentenceContainer').style.animation = "fadeIn 1s ease forwards";
-//     addContentToSentence();
-//     currLock = event.target;
-// }
-
-// const questionsEnd = () => {
-//     console.log("סיימתי");
-//     // if (document.querySelector('.completeSentenceContainer').classList.contains("fade-in")) {
-//     //     document.querySelector('.completeSentenceContainer').classList.remove("fade-in")
-//     // };
-//     // addAnimation(document.querySelector('.completeSentenceContainer'), "fade-out", 1500, 200);
-//     // display lock
-//     currLock.style.display = "none";
-//     currLock.parentElement.setAttribute("draggable", "true");
-// }
-
-// closeWindow = (event) => {
-//     // document.querySelector('.completeSentenceContainer').classList.remove("fade-in");
-//     document.querySelector('.completeSentenceContainer').style.animation = "fadeOut 1s ease forwards";
-// //     document.querySelector('.completeSentenceContainer').classList.add("fade-out");
-// //    addAnimation(document.querySelector('.completeSentenceContainer'), "fade-out", 1500, 200, function() {
-// //         // document.querySelector('.completeSentenceContainer').classList.remove("fade-in");
-// //    });
-// }
-
-// let countDrag = 0;
-// // after an item has been dropped correctly
-// onDrop = (drag, drop) => {
-//     drag.setAttribute("draggable", "false");
-//     countDrag++;
-//     if (countDrag === document.querySelectorAll('.drag').length) {
-//         document.querySelector('#mission .instructions').innerHTML = "כל הכבוד! חשפתם את המספר הבא!"
-//     }
-// }
