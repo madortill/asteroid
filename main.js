@@ -11,7 +11,7 @@ var matrix = [
         {
             // about- page 1
             divName: ["about"],
-            functions: ['pop_buttons(document.querySelector("#back-button-odot"), "1", "0")']
+            functions: ['pop_buttons(document.querySelector("#back-button-odot"), "0", "0")']
         }
     ],
     // part 1
@@ -57,6 +57,7 @@ checkCode = (event) => {
     // if the code is correct
     if (input.value === eval(`coordinate_${input.getAttribute("data-num")}`)) {
         input.removeEventListener('input', checkCode);
+        input.readOnly = true;
         input.style.borderColor = "rgb(32, 219, 159)";
         cooardinates++;
     }
@@ -64,8 +65,10 @@ checkCode = (event) => {
     // if the user assigned all coordinates
     if (cooardinates === document.querySelectorAll('input').length) {
         // move part
-        movePage("1", "0");
-        document.querySelector(".odot-logo").style.display = "none";
+        setTimeout(() => {
+            movePage("1", "0");
+            document.querySelector(".odot-logo").style.display = "none";
+        }, 500);
     }
 }
 
