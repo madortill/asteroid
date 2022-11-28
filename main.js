@@ -34,8 +34,8 @@ var matrix = [
 ];
 
 // code to open the mission
-const coordinate_1 = "183";
-const coordinate_2 = "542";
+const coordinate_1 = "000";
+const coordinate_2 = "000";
 
 var dragX = 0,
     dragY = 0;
